@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add item</title>
+</head>
+<body>
+  <form>
+    <input type="text" placeholder="task to do" id="myinput" ><span onclick="dis()">add</span>
+
+  </form>
+  <ol id="tasklist">
+
+  </ol>
+  <script>
+    function dis() {
+      const x=document.getElementById('myinput').value;
+      if (x===''){
+        alert('enter msg...')
+      }
+      else{
+      const a=document.createElement('li');
+      const b=document.createTextNode(x);
+      a.appendChild(b);
+      document.getElementById('tasklist').appendChild(a);
+      console.log(x);
+      const y=document.getElementById('myinput').value='';
+      }
+      
+    }
+
+  </script>
+  
+</body>
+</html>
